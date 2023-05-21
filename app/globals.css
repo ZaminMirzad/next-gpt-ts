@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer components {
+  .info {
+    @apply p-4 bg-gray-700 rounded-lg;
+  }
+  .chatRow {
+    @apply px-5 py-3 rounded-lg gap-x-3 transition-all duration-200 ease-out cursor-pointer border border-slate-400 hover:bg-slate-900/50;
+  }
+  .hovered {
+    @apply hover:bg-red-900/50 hover:border-red-900 transition-all duration-200 ease-out;
+  }
+  .disabled {
+    @apply disabled:grayscale disabled:bg-gray-800 disabled:hover:bg-gray-800 disabled:text-gray-400;
+  }
+}
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +38,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
