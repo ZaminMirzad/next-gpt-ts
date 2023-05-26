@@ -11,6 +11,7 @@ import { collection, orderBy, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import ChatRow from "./ChatRow";
 import { ImSpinner3 } from "react-icons/im";
+import ModelSelection from "./ModelSelection";
 
 export default function Sidebar() {
   const { data: session } = useSession();
@@ -29,9 +30,12 @@ export default function Sidebar() {
     <div className="p-4 flex flex-col  text-slate-100 h-full justify-between">
       <div className="flex-1">
         <div className="flex flex-col">
-          {/* newchat btn */}
+          {/* create a new chat */}
           <NewChat />
-          <div>{/* TODO -> model selection*/}</div>
+          <div className="hidden md:inline">
+            {/* TODO -> select openai model*/}
+            <ModelSelection />
+          </div>
           {/* TODO -> map throught chat rows */}
           <div className="my-3">
             {chats ? (

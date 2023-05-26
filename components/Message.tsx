@@ -3,8 +3,6 @@ import { ChatCompletionResponseMessage } from "openai";
 import React from "react";
 
 function Message({ message }: DocumentData) {
-  console.log(message?.text);
-
   return (
     <div className="py-5">
       <div className="flex items-start space-x-5 px-10 max-w-2xl mx-auto">

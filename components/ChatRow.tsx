@@ -45,7 +45,7 @@ function ChatRow({ id }: Props) {
       }`}
     >
       <ChatBubbleLeftIcon className="w-5 h-5 text-teal-500" />
-      <p className="flex-1 hidden md:inline-flex truncate mr-2">
+      <p className="flex-1  md:inline-flex truncate mr-2">
         {chatRowText?.text?.content || chatRowText?.text || "No chat was made"}
       </p>
       <TrashIcon
